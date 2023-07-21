@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/mllibexam/pom.xml" />
+        <option value="$PROJECT_DIR$/spark-core/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka-java-ent/pom.xml" />
+        <option value="$PROJECT_DIR$/spark-HDFS-exam/pom.xml" />
+        <option value="$PROJECT_DIR$/elastic-java-ent/pom.xml" />
+        <option value="$PROJECT_DIR$/java-mongodb-ent/pom.xml" />
+        <option value="$PROJECT_DIR$/PoliceCallService/pom.xml" />
+        <option value="$PROJECT_DIR$/streaming-time-op/pom.xml" />
+        <option value="$PROJECT_DIR$/sparkstreamingkafka/pom.xml" />
+        <option value="$PROJECT_DIR$/SparkStreamingListener/pom.xml" />
+        <option value="$PROJECT_DIR$/sparkmllibnaivebayes/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
