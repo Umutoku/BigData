@@ -13,6 +13,7 @@
       <directory url="file://$PROJECT_DIR$/sparkstreamingkafka/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/SparkStreamingListener/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/sparkmllibnaivebayes/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/e-ticaret-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -30,7 +31,13 @@
         <module name="PoliceCallService" />
         <module name="sparkstreamingkafka" />
         <module name="sparkmllibnaivebayes" />
+        <module name="e-ticaret-api" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="e-ticaret-api" options="-parameters" />
+    </option>
   </component>
 </project>

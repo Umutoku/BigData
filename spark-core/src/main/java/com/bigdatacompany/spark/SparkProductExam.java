@@ -31,6 +31,7 @@ public class SparkProductExam {
         //countPriceDS.show();
 
 
+
         //SQL sorguları için yapılması gereken
         rawDS.createOrReplaceTempView("product");
         rawDS.createGlobalTempView("product");
