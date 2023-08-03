@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/SparkStreamingListener/pom.xml" />
         <option value="$PROJECT_DIR$/sparkmllibnaivebayes/pom.xml" />
         <option value="$PROJECT_DIR$/e-ticaret-api/pom.xml" />
+        <option value="$PROJECT_DIR$/e-ticaret-consumer/pom.xml" />
       </list>
     </option>
   </component>
