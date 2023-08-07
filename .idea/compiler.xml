@@ -15,6 +15,7 @@
       <directory url="file://$PROJECT_DIR$/sparkmllibnaivebayes/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/e-ticaret-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/e-ticaret-consumer/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/twitter-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -25,6 +26,7 @@
         <module name="SparkStreamingListener" />
         <module name="e-ticaret-consumer" />
         <module name="elastic-java-ent" />
+        <module name="twitter-api" />
         <module name="spark-core" />
         <module name="java-mongodb-ent" />
         <module name="sparkstreamingkafka" />

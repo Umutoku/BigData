@@ -29,6 +29,13 @@ public class Application {
         Dataset<Row> valueDS = rowDataset.select(functions.from_json(rowDataset.col("value"), schema)
                 .as("jsontostructs")).select("jsontostructs.*");
 
+        Dataset<Row> current_ts_window = valueDS
+                .groupBy(functions.window(valueDS.col("current_ts"), "30 minute"), valueDS
+                        .col("search")).count();
+
+        MongoSpark.write(current_ts_window)
+                .option("collection","TimeWindowSave").save();
+
         //en çok arama yapılan 10 ürün
 //        Dataset<Row> searchGroup = valueDS.groupBy("search").count();
 //        Dataset<Row> searchResult = searchGroup.sort(functions.desc("count")).limit(10);
@@ -37,14 +44,16 @@ public class Application {
 //
 //        MongoSpark.write(searchResult).mode("overwrite").save();
 
-        Dataset<Row> count = valueDS.groupBy("userid", "search").count();
+        //Userid ile kullanıcı hangi ürünleri kaç defa aratmış
 
-        Dataset<Row> filter = count.filter("count > 5");
-
-        Dataset<Row> pivot = filter.groupBy("userid").pivot("search").sum("count").na().fill(0);
-
-        pivot.show();
-
-        MongoSpark.write(pivot).option("collection","searchByUserid").mode("overwrite").save();
+//        Dataset<Row> count = valueDS.groupBy("userid", "search").count();
+//
+//        Dataset<Row> filter = count.filter("count > 5");
+//
+//        Dataset<Row> pivot = filter.groupBy("userid").pivot("search").sum("count").na().fill(0);
+//
+//        pivot.show();
+//
+//        MongoSpark.write(pivot).option("collection","searchByUserid").mode("overwrite").save();
     }
 }

@@ -39,8 +39,29 @@ public class SearchController {
             jsonObject.put("current_ts", rand.toString());
             jsonObject.put("region", cities.get(i));
             jsonObject.put("userid", random.nextInt(15000-1000)+1000);
-            System.out.println(jsonObject.toJSONString());
+            //System.out.println(jsonObject.toJSONString());
             messageProducer.send(jsonObject.toJSONString());
         }
     }
+
+    @GetMapping("/search/stream")
+    public void searchIndexStreaming(@RequestParam String term){
+        List<String> cities = Arrays.asList("Ankara", "Istanbul", "Mersin", "Malatya", "Elazığ", "İzmir");
+        //List<String> products = Arrays.asList("Bebek bezi", "Klavye", "Fare", "Kulaklık", "Temizleme jeli", "Ampul","Koltuk");
+
+
+            Random random = new Random();
+            int i = random.nextInt(cities.size());
+
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("search", term);
+            jsonObject.put("current_ts", timestamp.toString());
+            jsonObject.put("region", cities.get(i));
+            jsonObject.put("userid", random.nextInt(15000-1000)+1000);
+
+            messageProducer.send(jsonObject.toJSONString());
+
+    }
+
 }

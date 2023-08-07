@@ -24,7 +24,7 @@ public class MessageProducer {
 
     }
     public void send(String term){
-        ProducerRecord<String, String> rec = new ProducerRecord<>("search-analysis-userid", term);
+        ProducerRecord<String, String> rec = new ProducerRecord<>("search-analysis-stream", term);
         producer.send(rec);
     }
     public void close(){
