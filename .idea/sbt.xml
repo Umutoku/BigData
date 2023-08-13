@@ -3,6 +3,16 @@
   <component name="ScalaSbtSettings">
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/HelloWorld" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/HelloWorld" />
+            <option value="$PROJECT_DIR$/HelloWorld/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.3.10" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/e-ticaret-scala-consumer" />
       </SbtProjectSettings>
     </option>

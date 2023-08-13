@@ -16,20 +16,30 @@
       <directory url="file://$PROJECT_DIR$/e-ticaret-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/e-ticaret-consumer/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/twitter-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/efthavale-takip/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/kredikarti-takip/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/clickevent-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/clickevent-consumer/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/es-autocomplete-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="clickevent-consumer" />
         <module name="mllibexam" />
         <module name="SparkStreamingListener" />
+        <module name="es-autocomplete-api" />
         <module name="e-ticaret-consumer" />
         <module name="elastic-java-ent" />
+        <module name="clickevent-api" />
         <module name="twitter-api" />
+        <module name="kredikarti-takip" />
         <module name="spark-core" />
         <module name="java-mongodb-ent" />
         <module name="sparkstreamingkafka" />
+        <module name="efthavale-takip" />
         <module name="kafka-java-ent" />
         <module name="spark-HDFS-exam" />
         <module name="streaming-time-op" />
