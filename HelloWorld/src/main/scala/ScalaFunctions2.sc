@@ -44,4 +44,4 @@ def strIncome(str:String):(Int=>Int)= {
   total(str, _: Int)
 }
 
-val result = strIncome("Hello World")(2)
+val result = strIncome("Hello World")(.o92)

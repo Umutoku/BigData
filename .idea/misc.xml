@@ -23,10 +23,14 @@
         <option value="$PROJECT_DIR$/clickevent-api/pom.xml" />
         <option value="$PROJECT_DIR$/clickevent-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/es-autocomplete-api/pom.xml" />
+        <option value="$PROJECT_DIR$/VBOmavenscaladeneme/pom.xml" />
+        <option value="$PROJECT_DIR$/VBO_scala_temel/pom.xml" />
+        <option value="$PROJECT_DIR$/VBOSparkScalaMavenOrn/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="PyPackaging">
+    <option name="earlyReleasesAsUpgrades" value="true" />
   </component>
 </project>

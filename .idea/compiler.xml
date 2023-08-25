@@ -21,6 +21,9 @@
       <directory url="file://$PROJECT_DIR$/clickevent-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/clickevent-consumer/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/es-autocomplete-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/VBOmavenscaladeneme/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/VBO_scala_temel/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/VBOSparkScalaMavenOrn/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -31,6 +34,7 @@
         <module name="mllibexam" />
         <module name="SparkStreamingListener" />
         <module name="es-autocomplete-api" />
+        <module name="VBOSparkScalaMavenOrn" />
         <module name="e-ticaret-consumer" />
         <module name="elastic-java-ent" />
         <module name="clickevent-api" />
@@ -41,6 +45,8 @@
         <module name="sparkstreamingkafka" />
         <module name="efthavale-takip" />
         <module name="kafka-java-ent" />
+        <module name="VBO_scala_temel" />
+        <module name="VBOmavenscaladeneme" />
         <module name="spark-HDFS-exam" />
         <module name="streaming-time-op" />
         <module name="PoliceCallService" />
