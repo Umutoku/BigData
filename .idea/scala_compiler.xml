@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="HelloWorld,VBOSparkScalaMavenOrn,VBO_scala_temel,VBOmavenscaladeneme,bigdata" />
+    <profile name="sbt 1" modules="HelloWorld,VBOSparkScalaMavenOrn,VBO_scala_temel,VBOmavenscaladeneme,bigdata,spark-essentials,spark-essentials_5305" />
   </component>
 </project>
