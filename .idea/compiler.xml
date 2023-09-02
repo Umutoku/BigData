@@ -54,6 +54,30 @@
         <module name="e-ticaret-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="clickevent-api" target="1.6" />
+      <module name="clickevent-consumer" target="1.8" />
+      <module name="e-ticaret-api" target="1.8" />
+      <module name="e-ticaret-consumer" target="1.5" />
+      <module name="efthavale-takip" target="1.5" />
+      <module name="elastic-java-ent" target="1.8" />
+      <module name="es-autocomplete-api" target="1.6" />
+      <module name="java-mongodb-ent" target="1.5" />
+      <module name="kafka-java-ent" target="1.8" />
+      <module name="kredikarti-takip" target="1.5" />
+      <module name="mllibexam" target="1.5" />
+      <module name="PoliceCallService" target="1.5" />
+      <module name="spark-core" target="1.5" />
+      <module name="spark-HDFS-exam" target="1.5" />
+      <module name="sparkmllibnaivebayes" target="1.5" />
+      <module name="sparkstreamingkafka" target="1.5" />
+      <module name="SparkStreamingListener" target="1.5" />
+      <module name="streaming-time-op" target="1.5" />
+      <module name="twitter-api" target="1.5" />
+      <module name="VBO_scala_temel" target="1.5" />
+      <module name="VBOmavenscaladeneme" target="1.5" />
+      <module name="VBOSparkScalaMavenOrn" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

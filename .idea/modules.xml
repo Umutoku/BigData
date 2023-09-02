@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HelloWorld.iml" filepath="$PROJECT_DIR$/.idea/modules/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWorld/.idea/modules/HelloWorld-build.iml" filepath="$PROJECT_DIR$/HelloWorld/.idea/modules/HelloWorld-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PoliceCallService/PoliceCallService.iml" filepath="$PROJECT_DIR$/PoliceCallService/PoliceCallService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SparkStreamingListener/SparkStreamingListener.iml" filepath="$PROJECT_DIR$/SparkStreamingListener/SparkStreamingListener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spark_RockTheJVM/.idea/modules/Spark_RockTheJVM.spark-essentials.iml" filepath="$PROJECT_DIR$/Spark_RockTheJVM/.idea/modules/Spark_RockTheJVM.spark-essentials.iml" />
       <module fileurl="file://$PROJECT_DIR$/VBOSparkScalaMavenOrn.iml" filepath="$PROJECT_DIR$/VBOSparkScalaMavenOrn.iml" />
       <module fileurl="file://$PROJECT_DIR$/VBOSparkTemelPython/VBOSparkTemelPython.iml" filepath="$PROJECT_DIR$/VBOSparkTemelPython/VBOSparkTemelPython.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VBO_scala_temel.iml" filepath="$PROJECT_DIR$/VBO_scala_temel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VBOmavenscaladeneme.iml" filepath="$PROJECT_DIR$/VBOmavenscaladeneme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bigdata.iml" filepath="$PROJECT_DIR$/.idea/bigdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bigdata-build.iml" filepath="$PROJECT_DIR$/.idea/modules/bigdata-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clickevent-api.iml" filepath="$PROJECT_DIR$/clickevent-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clickevent-consumer.iml" filepath="$PROJECT_DIR$/clickevent-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-ticaret-api.iml" filepath="$PROJECT_DIR$/e-ticaret-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-ticaret-consumer.iml" filepath="$PROJECT_DIR$/e-ticaret-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/efthavale-takip.iml" filepath="$PROJECT_DIR$/efthavale-takip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/elastic-java-ent/elastic-java-ent.iml" filepath="$PROJECT_DIR$/elastic-java-ent/elastic-java-ent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/es-autocomplete-api.iml" filepath="$PROJECT_DIR$/es-autocomplete-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-mongodb-ent/java-mongodb-ent.iml" filepath="$PROJECT_DIR$/java-mongodb-ent/java-mongodb-ent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-java-ent/kafka-java-ent.iml" filepath="$PROJECT_DIR$/kafka-java-ent/kafka-java-ent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kredikarti-takip.iml" filepath="$PROJECT_DIR$/kredikarti-takip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mllibexam/mllibexam.iml" filepath="$PROJECT_DIR$/mllibexam/mllibexam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spark_RockTheJVM/.idea/modules/project.spark-essentials-build.iml" filepath="$PROJECT_DIR$/Spark_RockTheJVM/.idea/modules/project.spark-essentials-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spark-HDFS-exam/spark-HDFS-exam.iml" filepath="$PROJECT_DIR$/spark-HDFS-exam/spark-HDFS-exam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spark-core/spark-core.iml" filepath="$PROJECT_DIR$/spark-core/spark-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spark-essentials/.idea/modules/spark-essentials.iml" filepath="$PROJECT_DIR$/spark-essentials/.idea/modules/spark-essentials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spark-essentials/.idea/modules/spark-essentials-build.iml" filepath="$PROJECT_DIR$/spark-essentials/.idea/modules/spark-essentials-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sparkmllibnaivebayes.iml" filepath="$PROJECT_DIR$/sparkmllibnaivebayes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sparkstreamingkafka/sparkstreamingkafka.iml" filepath="$PROJECT_DIR$/sparkstreamingkafka/sparkstreamingkafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/streaming-time-op/streaming-time-op.iml" filepath="$PROJECT_DIR$/streaming-time-op/streaming-time-op.iml" />
+      <module fileurl="file://$PROJECT_DIR$/twitter-api.iml" filepath="$PROJECT_DIR$/twitter-api.iml" />
     </modules>
   </component>
 </project>

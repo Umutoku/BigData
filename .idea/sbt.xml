@@ -14,6 +14,16 @@
         <option name="sbtVersion" value="1.3.10" />
       </SbtProjectSettings>
       <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Spark_RockTheJVM" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Spark_RockTheJVM" />
+            <option value="$PROJECT_DIR$/Spark_RockTheJVM/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.9.4" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/e-ticaret-scala-consumer" />
       </SbtProjectSettings>
       <SbtProjectSettings>
