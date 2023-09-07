@@ -1,9 +1,13 @@
 package part3typesdatasets
 
 import java.sql.Date
-
 import org.apache.spark.sql.{DataFrame, Dataset, Encoders, SparkSession}
 import org.apache.spark.sql.functions._
+import org.json4s.DoubleJsonFormats.GenericFormat
+import org.json4s.jsonwritable
+
+import java.util.jar.Attributes.Name
+import scala.math.Ordered.orderingToOrdered
 
 
 object Datasets extends App {
@@ -17,7 +21,7 @@ object Datasets extends App {
     .format("csv")
     .option("header", "true")
     .option("inferSchema", "true")
-    .load("src/main/resources/data/numbers.csv")
+    .load("Spark_RockTheJVM/src/main/resources/data/numbers.csv")
 
   numbersDF.printSchema()
 
@@ -42,7 +46,7 @@ object Datasets extends App {
   // 2 - read the DF from the file
   def readDF(filename: String) = spark.read
     .option("inferSchema", "true")
-    .json(s"src/main/resources/data/$filename")
+    .json(s"Spark_RockTheJVM/src/main/resources/data/$filename")
 
   val carsDF = readDF("cars.json")
 
@@ -65,18 +69,47 @@ object Datasets extends App {
     * 3. Average HP for the entire dataset
     */
 
-  // 1
-  val carsCount = carsDS.count
-  println(carsCount)
+//
+//  // 1.
+//  val carsCountDS = carsDS.count
+//
+//  // 2.
+//  val powerfulCarsDS = carsDS.filter(_.Horsepower.getOrElse(0L)>140).count()
+//
+//  // 3.
+//  carsDS.select(avg(col("Horsepower")))
+//  val avgHpDS = {
+//    carsDS.groupBy($"Name")
+//      .agg(Map(
+//        "Horsepower" -> "avg"
+//      ))
+//  }
+//  avgHpDS.show()
 
-  // 2
-  println(carsDS.filter(_.Horsepower.getOrElse(0L) > 140).count)
 
-  // 3
-  println(carsDS.map(_.Horsepower.getOrElse(0L)).reduce(_ + _) / carsCount)
+
+
+
+
+
+
+
+
+
+
+
+//  // 1
+//  val carsCount = carsDS.count
+//  println(carsCount)
+//
+//  // 2
+//  println(carsDS.filter(_.Horsepower.getOrElse(0L) > 140).count)
+//
+//  // 3
+//  println(carsDS.map(_.Horsepower.getOrElse(0L)).reduce(_ + _) / carsCount)
 
   // also use the DF functions!
-  carsDS.select(avg(col("Horsepower")))
+//  carsDS.select(avg(col("Horsepower")))
 
 
   // Joins
@@ -90,22 +123,35 @@ object Datasets extends App {
 
   val guitarPlayerBandsDS: Dataset[(GuitarPlayer, Band)] = guitarPlayersDS.joinWith(bandsDS, guitarPlayersDS.col("band") === bandsDS.col("id"), "inner")
 
-  /**
-    * Exercise: join the guitarsDS and guitarPlayersDS, in an outer join
-    * (hint: use array_contains)
-    */
+    /**
+      * Exercise: join the guitarsDS and guitarPlayersDS, in an outer join
+      * (hint: use array_contains)
+      */
 
-  guitarPlayersDS
-    .joinWith(guitarsDS, array_contains(guitarPlayersDS.col("guitars"), guitarsDS.col("id")), "outer")
-    .show()
+  val guitarsAndPlayerDS = guitarPlayersDS
+    .join(guitarsDS,array_contains(guitarPlayersDS.col("id"),guitarsDS.col("id")),"outer")
 
-  // Grouping DS
+//  guitarsAndPlayerDS.show()
 
-  val carsGroupedByOrigin = carsDS
-    .groupByKey(_.Origin)
-    .count()
-    .show()
 
-  // joins and groups are WIDE transformations, will involve SHUFFLE operations
+
+
+
+
+
+
+//
+//  guitarPlayersDS
+//    .joinWith(guitarsDS, array_contains(guitarPlayersDS.col("guitars"), guitarsDS.col("id")), "outer")
+//    .show()
+//
+//  // Grouping DS
+//
+//  val carsGroupedByOrigin = carsDS
+//    .groupByKey(_.Origin)
+//    .count()
+//    .show()
+//
+//  // joins and groups are WIDE transformations, will involve SHUFFLE operations
 
 }

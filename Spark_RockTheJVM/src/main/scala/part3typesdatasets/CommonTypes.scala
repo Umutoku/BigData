@@ -13,7 +13,7 @@ object CommonTypes extends App {
 
   val moviesDF = spark.read
     .option("inferSchema", "true")
-    .json("src/main/resources/data/movies.json")
+    .json("Spark_RockTheJVM/src/main/resources/data/movies.json")
 
   // adding a plain value to a DF
   moviesDF.select(col("Title"), lit(47).as("plain_value"))
@@ -44,7 +44,7 @@ object CommonTypes extends App {
 
   val carsDF = spark.read
     .option("inferSchema", "true")
-    .json("src/main/resources/data/cars.json")
+    .json("Spark_RockTheJVM/src/main/resources/data/cars.json")
 
   // capitalization: initcap, lower, upper
   carsDF.select(initcap(col("Name")))
@@ -73,20 +73,43 @@ object CommonTypes extends App {
     *   - regexes
     */
 
-  def getCarNames: List[String] = List("Volkswagen", "Mercedes-Benz", "Ford")
+    def getCarList = List("Mercedes","BMW","Volkswagen")
 
-  // version 1 - regex
-  val complexRegex = getCarNames.map(_.toLowerCase()).mkString("|") // volskwagen|mercedes-benz|ford
-  carsDF.select(
-    col("Name"),
-    regexp_extract(col("Name"), complexRegex, 0).as("regex_extract")
-  ).where(col("regex_extract") =!= "")
-    .drop("regex_extract")
+    val carRegex = getCarList.map(_.toLowerCase()).mkString("|")
 
-  // version 2 - contains
-  val carNameFilters = getCarNames.map(_.toLowerCase()).map(name => col("Name").contains(name))
-  val bigFilter = carNameFilters.fold(lit(false))((combinedFilter, newCarNameFilter) => combinedFilter or newCarNameFilter)
+    carRegex.foreach(println)
+
+    carsDF
+      .select(
+        col("Name"),regexp_extract(col("Name"),carRegex,0).as("regex_ext")
+
+      ).where(col("regex_ext")=!= "")
+      .drop("regex_ext")
+
+  // contains
+  val carNameFilters = getCarList.map(_.toLowerCase()).map(name=> col("Name").contains(name))
+  val bigFilter = carNameFilters.fold(lit(false))((defaultFliter, newCarNameFilter) => defaultFliter or newCarNameFilter)
   carsDF.filter(bigFilter).show
+
+
+
+
+
+
+//  def getCarNames: List[String] = List("Volkswagen", "Mercedes-Benz", "Ford")
+//
+//  // version 1 - regex
+//  val complexRegex = getCarNames.map(_.toLowerCase()).mkString("|") // volskwagen|mercedes-benz|ford
+//  carsDF.select(
+//    col("Name"),
+//    regexp_extract(col("Name"), complexRegex, 0).as("regex_extract")
+//  ).where(col("regex_extract") =!= "")
+//    .drop("regex_extract")
+//
+//  // version 2 - contains
+//  val carNameFilters = getCarNames.map(_.toLowerCase()).map(name => col("Name").contains(name))
+//  val bigFilter = carNameFilters.fold(lit(false))((combinedFilter, newCarNameFilter) => combinedFilter or newCarNameFilter)
+//  carsDF.filter(bigFilter).show
 
 
 }
